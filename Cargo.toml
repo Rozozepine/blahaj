@@ -1,0 +1,32 @@
+[package]
+name = "blahaj"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[profile.release-without-debug]
+inherits = "release"
+debug = false
+[dependencies]
+base64 = "0.21.2"
+image = "0.24.6"
+log = { version = "0.4.17", features = ["std"] }
+sysinfo = "0.29.0"
+winreg = "0.50.0"
+[dependencies.windows-sys]
+version = "0.48"
+features = [
+    "Win32_Foundation",
+    "Win32_Security",
+    "Win32_System_Threading",
+    "Win32_UI_WindowsAndMessaging",
+    "Win32_System_Memory",
+    "Win32_System_Diagnostics_Debug", 
+    "Win32_System_Diagnostics_ToolHelp",
+   "Win32_System_Kernel",
+   "Win32_System_SystemServices",
+   "Win32_Storage_FileSystem",
+   "Win32_System_IO",
+   "Win32_System_LibraryLoader",
+   "Win32_UI_WindowsAndMessaging"
+]
